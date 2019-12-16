@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import axios from "axios";
 import logo from './logo.svg';
-import PlayerCard from './PlayerCard';
+import PlayerCard from './Components/PlayerCard';
 import './App.css';
+import TopCounter from './Components/TopCounter';
 
 
 class App extends Component {
@@ -29,6 +30,8 @@ class App extends Component {
     return (
       <div>
         <h1>Women in the World Cup </h1>
+
+        <TopCounter />
 
         {this.state.data.map((data) => (
          <PlayerCard data={data} />
